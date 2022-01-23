@@ -32,12 +32,10 @@ class Mastermind():
         print("|_|  |_|\__,_|___/\__\___|_|  |_| |_| |_|_|_| |_|\__,_|\n\n")                                 
     
     def manualPlay(self):
-        
         # manualPlay is for allowing a human to play agaist the computer.
         # It asks the user what are the results of each guess the computer makese. 
         # It Then returns the users input as a tuple.
-        
-              
+
         self.turn += 1
 
         print()
@@ -204,7 +202,6 @@ class Mastermind():
         else:
             population = [[random.choice(allAvailableNumbers) for _ in range(SLOTS)]\
                                    for _ in range(popSize)]
-
         chosenOnes = []
         h = 1
         k = 0
@@ -344,8 +341,7 @@ if __name__ == '__main__':
             mastermindGame.geneticEvolution(MAX_POP_SIZE, MAX_GENERATIONS)
 
             while len(mastermindGame.newGeneration) == 0:
-                print('Computer Thinking 🤔' )
-                # This print statement simply means that a valid candidate was not found, so we will modify some of
+                # means that a valid candidate was not found, so we will modify some of
                 # our parameters and attempt more rigorously generate children
                 mastermindGame.geneticEvolution(MAX_POP_SIZE*2, MAX_GENERATIONS/2)
         
